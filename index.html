@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Colin Chen</title>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="PStyle.css" >
+    <link rel="icon" type="image/png" href="img/header.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script>
+
+      // $(window).load(function() {
+    	// 	// Animate loader off screen
+    	// 	$(".loader").delay(3000).fadeOut(200);;
+    	// });
+      // $(document).ready(function() {
+      //   $('#indexm').delay(3300).fadeIn(600);
+      // });
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 1000);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+        $(".loader").delay(3000).fadeOut(600);
+        $('#indexm').delay(3300).fadeIn(800);
+    });
+    </script>
+
+
+  </head>
+
+
+  <body id="indexbody">
+
+        <img src="img/loadingicon.gif" class="loader" id="loadingicon" alt="load">
+
+    <img src="img/frman2.gif" class="preimg prefrwoman" alt="prefrwoman"/>
+    <img src="img/birdring.gif" class="preimg prebird" alt="prebird"/>
+    <img src="img/carousel.gif" class="preimg precarousel" alt="precarousel"/>
+    <img src="img/owlring.gif" class="preimg preowl" alt="preowl"/>
+
+    <div id="indexm">
+
+
+
+      <div id="navbg">
+      </div>
+
+      <div id="bgimg">
+
+      </div>
+
+      <h1>Colin Chen</h1>
+
+
+
+      <div class="heading">
+
+        <nav>
+          <ul class="navigator">
+            <li>
+              <a href="#" id="bloglink">
+                <img src="img/buttons/blog1.png" id="blogtxt" alt="blogh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" id="aboutlink">
+                <img src="img/buttons/about1.png" id="abouttxt" alt="abouth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="work.html" id="worklink">
+                <img src="img/buttons/work1.png" id="worktxt" alt="workh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html" id="contactlink">
+                <img src="img/buttons/contact1.png" id="contacttxt" alt="cnotacth"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
+
+        <div class="container">
+          <ul class="bird">
+            <li><img src="img/buttons/bird1.png" id="blogh" alt="blog"/></li>
+            <li><img src="img/buttons/bird2.png" id="abouth" alt="about"/></li>
+            <li><img src="img/buttons/bird3.png" id="workh" alt="work"/></li>
+            <li><img src="img/buttons/bird4.png" id="contacth" alt="contact"/></li>
+          </ul>
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+
+
+
+        <script type="text/javascript">
+        if (document.documentElement.clientWidth > 1025) {
+
+          $("#blogtxt").hover(function(){
+            $("#bgimg,#blogh,#abouth,#abouttxt,#workh,#worktxt,#contacth,#contacttxt").stop(true, true).fadeOut(400);
+          },function(){
+            $("#bgimg,#blogh,#abouth,#abouttxt,#workh,#worktxt,#contacth,#contacttxt").stop(true, true).fadeIn(400);
+          })
+
+          $("#blogtxt").hover(function(){
+            $(".prefrwoman").stop(true, true).fadeIn(400);
+          },function(){
+            $(".prefrwoman").stop(true, true).fadeOut(400);
+          })
+
+
+          $("#abouttxt").hover(function(){
+            $("#bgimg,#abouth,#blogh,#blogtxt,#workh,#worktxt,#contacth,#contacttxt").stop(true, true).fadeOut(400);
+          },function(){
+            $("#bgimg,#abouth,#blogh,#blogtxt,#workh,#worktxt,#contacth,#contacttxt").stop(true, true).fadeIn(400);
+          })
+
+          $("#abouttxt").hover(function(){
+            $(".prebird").stop(true, true).fadeIn(400);
+          },function(){
+            $(".prebird").stop(true, true).fadeOut(400);
+          })
+
+          $("#worktxt").hover(function(){
+            $("#bgimg,#workh,#blogh,#blogtxt,#abouth,#abouttxt,#contacth,#contacttxt").stop(true, true).fadeOut(400);
+          },function(){
+            $("#bgimg,#workh,#blogh,#blogtxt,#abouth,#abouttxt,#contacth,#contacttxt").stop(true, true).fadeIn(400);
+          })
+
+          $("#worktxt").hover(function(){
+            $(".precarousel").stop(true, true).fadeIn(400);
+          },function(){
+            $(".precarousel").stop(true, true).fadeOut(400);
+          })
+
+          $("#contacttxt").hover(function(){
+            $("#bgimg,#contacth,#blogh,#blogtxt,#abouth,#abouttxt,#workh,#worktxt").stop(true, true).fadeOut(400);
+          },function(){
+            $("#bgimg,#contacth,#blogh,#blogtxt,#abouth,#abouttxt,#workh,#worktxt").stop(true, true).fadeIn(400);
+          })
+
+          $("#contacttxt").hover(function(){
+            $(".preowl").stop(true, true).fadeIn(400);
+          },function(){
+            $(".preowl").stop(true, true).fadeOut(400);
+          })
+        }
+
+
+
+
+
+        </script>
+
+
+
+
+
+  </body>
+
+
+
+
+
+</html>

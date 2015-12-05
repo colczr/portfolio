@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>About</title>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+	<link rel="stylesheet" href="PStyle.css">
+  <link rel="icon" type="image/png" href="img/header.png">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+  <!-- <script type="text/javascript" src="jquery.fullPage.js"></script>
+  <script type="text/javascript">
+  if (document.documentElement.clientWidth > 500){
+  		$(document).ready(function() {
+  			$('#fullpage').fullpage({
+  				scrollingSpeed: 1000
+  			});
+  		});
+    }
+  </script> -->
+  <script type="text/javascript">
+      // $(window).load(function() {
+      //   // Animate loader off screen
+      //   $(".loader").delay(500).fadeOut(500);;
+      // });
+      // $(document).ready(function() {
+      //   $('#aboutm').delay(500).fadeIn(500);
+      // });
+
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 1000);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      $(".loader").fadeOut(600);
+      $('#aboutm').fadeIn(800);
+    });
+    </script>
+</head>
+
+<body id="aboutbody">
+  <div class="loader" id="loader-wrapper">
+      <div id="loader"></div>
+  </div>
+
+
+
+  <div id="aboutm">
+
+  <div id="tinynavbg">
+  </div>
+
+  <div id="tinynavbgfixed">
+  </div>
+
+  <nav>
+    <ul class="navigator">
+      <li>
+        <a href="#" id="bloglink">
+          <img src="img/buttons/nav1.png" class="tinynav" id="tiny1" alt="blogh"/>
+        </a>
+      </li>
+
+      <li>
+        <a href="about.html" id="aboutlink">
+          <img src="img/buttons/bird2.png" id="tinybird2" alt="abouth"/>
+        </a>
+      </li>
+
+      <li>
+        <a href="work.html" id="worklink">
+          <img src="img/buttons/nav3.png" class="tinynav" id="tiny3" alt="workh"/>
+        </a>
+      </li>
+
+      <li>
+        <a href="contact.html" id="contactlink">
+          <img src="img/buttons/nav4.png" class="tinynav" id="tiny4" alt="cnotacth"/>
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html" id="homelink">
+          <img src="img/buttons/back.gif" class="tinynav" id="tiny5" alt="backh"/>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script type="text/javascript">
+  if (document.documentElement.clientWidth > 1025) {
+    $(".tinynav").hover(function(){
+      $(".tinyabouttext").stop(true, true).fadeOut("fast");
+    },function(){
+      $(".tinyabouttext").stop(true, true).fadeIn("fast");
+    })
+
+    $("#tiny1").hover(function(){
+      $(".tinyblogtext").stop(true, true).fadeIn("fast");
+    },function(){
+      $(".tinyblogtext").stop(true, true).fadeOut("fast");
+    })
+
+    $("#tiny3").hover(function(){
+      $(".tinyworktext").stop(true, true).fadeIn("fast");
+    },function(){
+      $(".tinyworktext").stop(true, true).fadeOut("fast");
+    })
+
+    $("#tiny4").hover(function(){
+      $(".tinycontacttext").stop(true, true).fadeIn("fast");
+    },function(){
+      $(".tinycontacttext").stop(true, true).fadeOut("fast");
+    })
+  }
+  </script>
+
+  <div class="textcontainer">
+    <ul>
+      <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
+      <li><img src="img/buttons/about1.png" class="tinydisplay tinytext tinyabouttext" alt="about"/></li>
+      <li><img src="img/buttons/work1.png" class="tinytext tinyworktext" alt="work"/></li>
+      <li><img src="img/buttons/contact1.png" class="tinytext tinycontacttext" alt="contact"/></li>
+    </ul>
+  </div>
+
+  <div id="fullpage">
+    <div class="section" id="section0">
+      <header>
+        <img src="img/aboutmenew.gif" id="aboutme" alt="aboutme"/>
+        <img src="img/line.gif" id="line" alt="line"/>
+      </header>
+			<img src="img/bird.gif" id="bird" alt="bird"/>
+
+      <img src="img/down.gif" id="down" alt="down"/>
+
+        <p class="txt" id="p1">
+          &nbsp; &nbsp; Aside from being a UX designer, I am a classical musician. I play the piano and the violin.
+          I love technology and I want to make technology accessible to everyone. That’s why I decided to become a UX designer.
+          Change life with design.
+        </p>
+
+    </div>
+
+    <div class="section" id="section1">
+
+      <img src="img/resume2.gif" id="resume" alt="resume"/>
+      <img src="img/line2.gif" id="line2" alt="line"/>
+      <img src="img/lion.gif" id="lion" alt="lion"/>
+      <img src="img/down.gif" id="up" alt="up"/>
+
+      <p class="txt" id="p2">
+        To know more about me, click <a href="resume.pdf">HERE</a> to view my resume.
+        <img src="img/skills.png" alt="skills"/>
+
+
+
+      <p>
+
+      <footer id="aboutfooter">
+        <p><img src="img/header.png" alt="footer"/></p>
+      </footer>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

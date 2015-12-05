@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colin Chen</title>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="PStyle.css" >
+    <link rel="icon" type="image/png" href="img/header.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script>
+      // $(window).load(function() {
+    	// 	// Animate loader off screen
+    	// 	$(".loader").delay(500).fadeOut(500);;
+    	// });
+      // $(document).ready(function() {
+      //   $('#contactm').delay(500).fadeIn(500);
+      // });
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 1000);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      $(".loader").fadeOut(600);
+      $('#contactm').fadeIn(800);
+    });
+    </script>
+
+
+  </head>
+
+  <body>
+    <div class="loader" id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+
+
+    <div id="contactm">
+
+
+
+
+      <nav>
+        <ul class="navigator">
+          <li>
+            <a href="#" id="bloglink">
+              <img src="img/buttons/nav1.png" class="tinynav" id="tiny1" alt="blogh"/>
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html" id="aboutlink">
+              <img src="img/buttons/nav2.png" class="tinynav" id="tiny2" alt="abouth"/>
+            </a>
+          </li>
+
+          <li>
+            <a href="work.html" id="worklink">
+              <img src="img/buttons/nav3.png" class="tinynav" id="tiny3" alt="workh"/>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" id="contactlink">
+              <img src="img/buttons/bird4.png" id="tinybird4" alt="cnotacth"/>
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html" id="homelink">
+              <img src="img/buttons/back.gif" class="tinynav" id="tiny5" alt="backh"/>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <script type="text/javascript">
+      if (document.documentElement.clientWidth > 1025) {
+        $(".tinynav").hover(function(){
+          $(".tinycontacttext").stop(true, true).fadeOut("fast");
+        },function(){
+          $(".tinycontacttext").stop(true, true).fadeIn("fast");
+        })
+
+        $("#tiny1").hover(function(){
+          $(".tinyblogtext").stop(true, true).fadeIn("fast");
+        },function(){
+          $(".tinyblogtext").stop(true, true).fadeOut("fast");
+        })
+
+        $("#tiny2").hover(function(){
+          $(".tinyabouttext").stop(true, true).fadeIn("fast");
+        },function(){
+          $(".tinyabouttext").stop(true, true).fadeOut("fast");
+        })
+
+        $("#tiny3").hover(function(){
+          $(".tinyworktext").stop(true, true).fadeIn("fast");
+        },function(){
+          $(".tinyworktext").stop(true, true).fadeOut("fast");
+        })
+      }
+      </script>
+
+      <div class="textcontainer">
+        <ul>
+          <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
+          <li><img src="img/buttons/about1.png" class="tinytext tinyabouttext" alt="about"/></li>
+          <li><img src="img/buttons/work1.png" class="tinytext tinyworktext" alt="work"/></li>
+          <li><img src="img/buttons/contact1.png" class="tinytext tinycontacttext tinydisplay" alt="contact"/></li>
+        </ul>
+      </div>
+
+
+
+        <div class="outer" id="outer">
+          <div class="middle">
+            <div class="inner">
+
+
+        <p>
+          <br><br>Colin Chen<br>
+          206-307-1269<br>
+          colczr@gmail.com<br>
+          <a href="https://www.linkedin.com/in/colintychen">
+            <img src="img/buttons/linkedin.gif" class="linkbutton" id= "linkedin" alt="facebook"/>
+          </a>
+          <br>
+          <img src="img/signature.gif" id="signature" alt="signature"/>
+        </p>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p><img src="img/header.png" alt="footer"/></p>
+        </footer>
+    </div>
+
+  </body>
