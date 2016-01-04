@@ -36,8 +36,8 @@
     }
 
     onReady(function () {
-      $(".loader").fadeOut(200);
-      $('#workm').delay(600).fadeIn(800);
+      $(".loader").fadeOut(300);
+      $('#workm').fadeIn(500);
 
     });
 
@@ -57,7 +57,7 @@
   </head>
 
   <body id="workbody">
-    <img src="img/loadingicon.gif" class="loader" id="loadingicon" alt="load">
+    <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
 
 
     <div id="viewer">
@@ -260,9 +260,7 @@
         $(".textviewer").fadeOut(1000);
       }
 
-      $("img.zzzpixup").click(function(){
-        fn1($(".pixupblock"));
-      });
+
 
       $("img.zzzcollage").click(function(){
         fn1($(".collageblock"));
