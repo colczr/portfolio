@@ -180,38 +180,30 @@ h1{
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    width: 7px;
 }
 
-footer p{
-  width: 100vw;
-  margin: 0;
-  text-align: center;
-  padding: 0;
-  font-family: champagne;
+::-webkit-scrollbar-track {
+    background-color: white;
+    padding-right: 10px;
 }
 
-footer p img{
-  width: 20px;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #cacaca;
 }
 
 footer{
+  position: absolute;
+  top: 77vh;
   width: 100vw;
-  position: fixed;
-  display: block;
-  bottom: 0;
-  background-color: white;
-  font-size: 20pt;
-  color: #cc3333;
-  display: none;
+
 }
 
-#aboutfooter{
-  bottom: -102vh;
-}
-#workfooter{
-  background-color: inherit;
-  color: white;
+footer img{
+  width: 40vw;
+  margin: auto;
+  display: block;
 }
 
 /*******END OF GENERAL STYLING***********/
@@ -265,7 +257,7 @@ footer{
 }
 
 #blogtxt{
-  width: 9vw;
+  width: 8vw;
   position: absolute;
   left: 10vw;
   top: 14vh;
@@ -280,7 +272,7 @@ footer{
 }
 
 #abouttxt{
-  width: 9vw;
+  width: 8vw;
   position: absolute;
   left: 27vw;
   top: 3vh;
@@ -295,7 +287,7 @@ footer{
 }
 
 #worktxt{
-  width: 9vw;
+  width: 8vw;
   position: absolute;
   left: 61vw;
   top: 11vh;
@@ -310,7 +302,7 @@ footer{
 }
 
 #contacttxt{
-  width: 9vw;
+  width: 8vw;
   position: absolute;
   left: 81vw;
   top: 16vh;
@@ -322,15 +314,6 @@ footer{
 /*ABOUT PAGE STYLING*/
 
 
-#bird{
-  width: 25vw;
-  max-width: 370px;
-  position: absolute;
-  right: 8vw;
-  margin-top: 0;
-  display: block;
-  top: 15vh;
-}
 
 .txt{
     font-family: Champagne;
@@ -433,7 +416,7 @@ footer{
   z-index: 2;
   position: static;
   padding-left: 10vw;
-  padding-top: 35vh;
+  padding-top: 30vh;
   margin: 0;
   margin-top: 10px;
 }
@@ -528,9 +511,20 @@ footer{
   max-width: 600px;
   position: absolute;
   padding-top: 35vh;
-  padding-bottom: 7vh;
+  padding-bottom: 5vh;
   left: 0vw;
 
+}
+
+
+#bird{
+  width: 28vw;
+  max-width: 380px;
+  position: absolute;
+  right: 8vw;
+  margin-top: 0;
+  display: block;
+  top: 15vh;
 }
 
 #section1{
@@ -606,8 +600,7 @@ footer{
 }
 
 .block{
-  height: 80vh;
-  width: 70vw;
+  height: 85vh;
   overflow: auto;
   background-color: white;
   left: 0;
@@ -648,23 +641,31 @@ footer{
 }
 
 div.pixupblock > div{
-  height: inherit;
-  width: 70vw;
-  max-width: 900px;
-  position: absolute;
-  left: 0;
-  right: 0;
+  height: 100%;
+  width: 85vw;
+  position: static;
   margin: auto;
+
 
 
 }
 
+div.pixupblock {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow: scroll;
+}
+
 div.pixupblock h3{
   font-family: champagne;
+  width: 15vw;
   font-size: 13pt;
   margin: 10px 0px;
   text-align: center;
   color: black;
+  display: inline-block;
+  vertical-align: top;
 }
 img.project_title{
   width: 30vh;
@@ -676,25 +677,39 @@ img.project_title{
 
 div.pixupblock p{
   font-family: "ralewayExtraLight";
+  width: 69vw;
+  margin: 10px 0px;
   font-size: 12pt;
-  margin: 0;
   color: black;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .image{
-  display: block;
   position: relative;
   margin: auto;
 }
 
 .persona{
-  width: 40vw;
-  margin-top: 20px;
+  width: 30vw;
+  margin-top: 2vw;
+  margin-right: 2vw;
 }
 
-.storyboard{
-  width: 40vw;
+.storyboard, .wireframe{
+  width: 60vw;
+  margin: 2vh;
 
+}
+
+.script{
+  width: 30vw;
+  margin: 2vh;
+}
+
+.hifi{
+  width: 50vw;
+  margin: 2vh;
 }
 
 .comp{
@@ -1303,9 +1318,6 @@ body{
   }
 
 
-  footer p{
-    font-size: 15pt;
-  }
 /*end of homepage styling*/
 
 /*about page styling*/
@@ -1544,11 +1556,6 @@ img.tinytext{
   position: inherit;
 }
 
-#aboutfooter{
-  position: static;
-  bottom: 0vh;
-  font-size: 13pt;
-}
 /*end of about page styling*/
 
 /*work page styling*/

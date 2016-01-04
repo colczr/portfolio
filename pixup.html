@@ -22,7 +22,7 @@
       // });
 
       function onReady(callback) {
-      var intervalID = window.setInterval(checkReady, 500);
+      var intervalID = window.setInterval(checkReady, 700);
       function checkReady() {
           if (document.getElementsByTagName('body')[0] !== undefined) {
               window.clearInterval(intervalID);
@@ -47,7 +47,7 @@
   </head>
 
   <body id="workbody">
-    <img src="img/loadingicon.gif" class="loader" id="loadingicon" alt="load">
+    <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
 
 
     <div id="viewer">
@@ -80,7 +80,7 @@
             </li>
 
             <li>
-              <a href="#" id="worklink">
+              <a href="work.html" id="worklink">
                 <img src="img/buttons/bird3.png" id="tinybird3" alt="workh"/>
               </a>
             </li>
@@ -143,31 +143,65 @@
       <a href="work.html"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
       <div>
           <img src="img/pixup_title.png" class="project_title" alt="pixup UX and App Design"/>
-          <p>PixUp is a peer-to-peer delivery service that is currently under development. PixUp is a platform to
+          <h3>Overview</h3>
+          <p>Timeline: 09/2015 - 01/2016<br>
+            Client: PixUp (Ann Arbor startup)<br>
+            Type: App/UX design<br><br>
+            PixUp is a peer-to-peer delivery service that is currently under development. PixUp is a platform to
             connect vehicle owners (drivers) with residents/businesses that potentially need delivery service (users). Drivers
             pick up requests made by users and offer instant delivery from and/or to the users, who in turn offer monetary compensation
-            to the drivers.
+            to the drivers.</p>
+          <h3>UX Methods</h3>
+          <p>Interview | Persona &amp; Scenario | Survey | Competitive Analysis | Usability Test</p>
+          <hr>
           <h3>Interview and Persona</h3>
           <p>The personae are generated from a series of interviews.
             A total of six potential customers (three drivers and three users) were interviewed. A thorough interview protocol that
             inquired about online TV streaming experience was prepared in advance by us and incorporated during the interview process. From the information
-            we collected, we generated three personae based on result of interviews, which reflected one user and two drivers of different age range.<br>
+            we collected, we generated three personae based on result of interviews, which reflected one user and two drivers of different age range.
+            <br><img src="img/persona_1.jpg" class="image persona" alt="persona_1"/>
+            <img src="img/persona_2.jpg" class="image persona" alt="persona_2"/>
+            <img src="img/persona_3.jpg" class="image persona" alt="persona_3"/>
 
           </p>
-          <img src="img/persona_1.jpg" class="image persona" alt="persona_1"/>
-          <img src="img/persona_2.jpg" class="image persona" alt="persona_2"/>
-          <img src="img/persona_3.jpg" class="image persona" alt="persona_3"/>
 
+        <br><hr>
         <h3>Storyboard</h3>
           <p>We used Bitstrips to create our storyboard after creating the persona and having shown it to the client.
-            <img src="img/driver_storyboard.jpg" class="image storyboard" alt="driver_storyboard"/>
+            <br><img src="img/storyboard.png" class="image storyboard" alt="driver_storyboard"/>
           </p>
-        <h3>Comparative Analysis</h3>
+        <br><hr>
+        <h3>Competitive Analysis</h3>
         <p>
           We compared PixUp with several competitors that offer express and peer-to-peer delivery services. A total of 7 competitors
           (Major competitors: Kanga, Dolly, and UberRush; Minor Competitors: Amazon Fresh, Google Express, UPS, and UHaul) were chosen and evaluated under several different
           categories. We analyzed and discussed our data and research to create a table that compares PixUp to other competitors.
-          <img src="img/comp.jpg" class="image comp" alt="comparative analysis"/>
+          <br><img src="img/comp.jpg" class="image comp" alt="Competitive analysis"/>
+        </p>
+        <br><hr>
+        <h3>Wireframes</h3>
+        <p>
+          We created wireframes for driver and user based on our findings in the user interview, storyboard
+          as well as competitive analysis. Here only driver's wireframe is listed below.
+          <br><img src="img/driverwireframe.png" class="image wireframe" alt="Wireframe"/>
+        </p>
+        <br><hr>
+        <h3>Usability Test</h3>
+        <p>
+          3 customer and 2 driver testers were recruited to complete 5 and 4 tasks, respectively. Our
+          team also developed pre and post questions for the tasks. We discovered how users perceive
+          the app as well as various issues that they have encountered.
+          <br>Based on the findings, we adjusted details on the user interface and added various extra
+          pages in the user interface as well.
+
+          <br><img src="img/script.png" class="image script" alt="script"/>
+          <img src="img/script2.png" class="image script" alt="script"/>
+        </p>
+        <h3>High-Fidelity Prototype Samples</h3>
+        <p>
+          Hi-Fi prototypes are generated based on modifications from usability test.
+
+          <br><img src="img/hifi.png" class="image hifi" alt="hifi"/>
         </p>
       </div>
     </div>
