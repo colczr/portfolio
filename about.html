@@ -54,14 +54,13 @@
     onReady(function () {
       $(".loader").fadeOut(600);
       $('#aboutm').fadeIn(800);
+      $("#down").fadeOut(1200).fadeIn(800).fadeOut(800).fadeIn(800);
     });
     </script>
 </head>
 
 <body id="aboutbody">
-  <div class="loader" id="loader-wrapper">
-      <div id="loader"></div>
-  </div>
+  <img src="img/loadingicon.gif" class="loader" id="loadingicon" alt="load">
 
 
 
@@ -73,7 +72,7 @@
   <div id="tinynavbgfixed">
   </div>
 
-  <nav>
+  <nav class="contactnav">
     <ul class="navigator">
       <li>
         <a href="#" id="bloglink">
@@ -135,7 +134,7 @@
   }
   </script>
 
-  <div class="textcontainer">
+  <div class="textcontainer abouttextcontainer">
     <ul>
       <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
       <li><img src="img/buttons/about1.png" class="tinydisplay tinytext tinyabouttext" alt="about"/></li>
@@ -144,48 +143,79 @@
     </ul>
   </div>
 
-  <div id="fullpage">
+
     <div class="section" id="section0">
-      <header>
-        <img src="img/aboutmenew.gif" id="aboutme" alt="aboutme"/>
-        <img src="img/line.gif" id="line" alt="line"/>
-      </header>
+      <p class="txt" id="p1">
+        &nbsp; &nbsp; Hello, welcome to my portfolio! My name is Colin Chen, a first-year Master's student at the University of Michigan.
+        I study HCI and data science in the program. Aside from being a UX designer, I am a classical musician. I play the piano and the violin.
+        I love technology and I want to make technology accessible to everyone. That’s why I decided to become a UX designer.
+        Change life with design.
+      </p>
+      <img src="img/line.gif" id="line" alt="line"/>
+      <img src="img/aboutmenew.gif" id="aboutme" alt="aboutme"/>
+
 			<img src="img/bird.gif" id="bird" alt="bird"/>
+      <div id="down">
+        <p>Scroll Down<p>
+        <img src="img/down.gif" alt="down"/>
+      </div>
 
-      <img src="img/down.gif" id="down" alt="down"/>
-
-        <p class="txt" id="p1">
-          &nbsp; &nbsp; Aside from being a UX designer, I am a classical musician. I play the piano and the violin.
-          I love technology and I want to make technology accessible to everyone. That’s why I decided to become a UX designer.
-          Change life with design.
-        </p>
 
     </div>
 
     <div class="section" id="section1">
-
+      <img src="img/lion.gif" id="lion" alt="lion"/>
       <img src="img/resume2.gif" id="resume" alt="resume"/>
       <img src="img/line2.gif" id="line2" alt="line"/>
-      <img src="img/lion.gif" id="lion" alt="lion"/>
-      <img src="img/down.gif" id="up" alt="up"/>
+
 
       <p class="txt" id="p2">
         To know more about me, click <a href="resume.pdf">HERE</a> to view my resume.
-        <img src="img/skills.png" alt="skills"/>
+        <br><br><span>User Experience</span><br>
+        Lo-fi to Hi-fi Prototyping, Usability Evaluation, User focus groups, Interviews + Scripts, and User Testing
+        <br><br><span>Design</span><br>
+        Photoshop, Illustrator, InVision, Sketch, Pen-and-paper drawing
+        <br><br><span>Programming</span><br>
+        PHP, MySQL, HTML + CSS, JavaScript + jQuery, Java, Python
+        <br><br><span>Data Processing &amp; Analysis</span><br>
+        SPSS, Python, Regression Analysis, ANOVA, Post-hoc Multiple Comparisons, Chi-Square, T-test, Correlational Analysis
 
 
 
       <p>
 
-      <footer id="aboutfooter">
-        <p><img src="img/header.png" alt="footer"/></p>
-      </footer>
-      </div>
-
     </div>
 
   </div>
 
+
+<script>
+
+$(window).bind('DOMMouseScroll', function(e){
+  if(e.originalEvent.detail > 0) {
+      //scroll down
+      $('#down').stop(true,true).fadeOut(800);
+  }else {
+      //scroll up
+
+  }
+
+  //prevent page fom scrolling
+
+});
+
+$(window).bind('mousewheel', function(e){
+    if(e.originalEvent.wheelDelta < 0) {
+        //scroll down
+        $('#down').stop(true,true).fadeOut(800);
+    }else {
+        //scroll up
+
+    }
+
+    //prevent page fom scrolling
+});
+</script>
 
 </body>
 </html>

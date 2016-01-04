@@ -2,6 +2,8 @@
 
 
 
+
+
 #loadingicon{
   position: fixed;
   bottom: 0;
@@ -9,8 +11,10 @@
   left: 0;
   right: 0;
   margin: auto;
-  width: 200px;
-  height: 200px;
+  width: 10vw;
+  height: 10vw;
+  min-width: 150px;
+  min-height: 150px;
   z-index: 1000;
 }
 
@@ -97,6 +101,7 @@
 #aboutm{
   height: 100vh;
   display: none;
+  padding-top: 15vh;
 }
 
 #workm{
@@ -108,11 +113,30 @@
   margin: 0;
   padding: 0;
 }
+
+.abouttextcontainer{
+  width: 100vw;
+  height: 13vh;
+  background-color: white;
+  z-index: 9998;
+  position: fixed;
+  top:0;
+
+}
 .navigator{
   margin: 0;
   padding: 0;
 }
 a{
+  z-index: 9999;
+}
+
+.contactnav{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 9vh;
   z-index: 9999;
 }
 
@@ -126,12 +150,21 @@ a{
 
 @font-face{
   font-family: ChannelLeft;
-  src: url(ChannelLeft.ttf);
+  src: url(fonts/ChannelLeft.ttf);
+}
+@font-face{
+  font-family: Channel;
+  src: url(fonts/Channel.ttf);
 }
 @font-face{
   font-family: Champagne;
-  src: url(Champagne.ttf);
+  src: url(fonts/Champagne.ttf);
 }
+@font-face{
+  font-family: ralewayExtraLight;
+  src: url(fonts/ralewayExtraLight.ttf);
+}
+
 
 li{
   list-style-type: none;
@@ -212,7 +245,7 @@ footer{
 
 #bgimg{
   height: 100vh;
-  background-image: url(img/seattle3.jpg);
+  background-image: url(img/seattle3.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -225,61 +258,61 @@ footer{
 
 
 #blogh{
-  width: 80px;
+  width: 6vw;
   position: absolute;
   left: 5vw;
   top: 15vh;
 }
 
 #blogtxt{
-  width: 120px;
+  width: 9vw;
   position: absolute;
-  left: 9vw;
-  top: 15vh;
+  left: 10vw;
+  top: 14vh;
   z-index: 9999;
 }
 
 #abouth{
-  width: 90px;
+  width: 6vw;
   position: absolute;
   left: 20vw;
   top: 1vh;
 }
 
 #abouttxt{
-  width: 110px;
+  width: 9vw;
   position: absolute;
-  left: 26vw;
+  left: 27vw;
   top: 3vh;
   z-index: 9999;
 }
 
 #workh{
-  width: 90px;
+  width: 6vw;
   position: absolute;
   left: 55vw;
   top: 10vh;
 }
 
 #worktxt{
-  width: 110px;
+  width: 9vw;
   position: absolute;
-  left: 60vw;
+  left: 61vw;
   top: 11vh;
   z-index: 9999;
 }
 
 #contacth{
-  width: 80px;
+  width: 6vw;
   position: absolute;
   left: 75vw;
   top: 15vh;
 }
 
 #contacttxt{
-  width: 120px;
+  width: 9vw;
   position: absolute;
-  left: 80vw;
+  left: 81vw;
   top: 16vh;
   z-index: 9999;
 }
@@ -290,24 +323,33 @@ footer{
 
 
 #bird{
-  width: 40vw;
-  max-width: 500px;
+  width: 25vw;
+  max-width: 370px;
   position: absolute;
   right: 8vw;
   margin-top: 0;
+  display: block;
+  top: 15vh;
 }
 
 .txt{
     font-family: Champagne;
-    position: absolute;
-    font-size: 17pt;
+    font-size: 14pt;
 }
 
+.txt span{
+  text-transform: uppercase;
+  font-size: 2vw;
+  display: inline-block;
+  margin: 3px;
+  border-bottom: solid #936 1px;
+
+}
 
 .tinynav{
-  width: 30px;
+  width: 3vh;
+  top: 5vh;
   position: fixed;
-  top: 55px;
   z-index: 9999;
 }
 
@@ -316,9 +358,9 @@ footer{
 }
 
 #tinybird2{
-  width: 90px;
+  width: 6vh;
   position: fixed;
-  left: 180px;
+  left: 190px;
   top: 20px;
 }
 
@@ -327,9 +369,9 @@ footer{
 }
 
 #tinybird3{
-  width: 90px;
+  width: 6vh;
   position: fixed;
-  left: 280px;
+  left: 300px;
   top: 20px;
 }
 
@@ -342,10 +384,10 @@ footer{
 }
 
 #tinybird4{
-  width: 90px;
+  width: 6vh;
   position: fixed;
-  left: 390px;
-  top: 15px;
+  left: 410px;
+  top: 20px;
 }
 
 #tiny5{
@@ -354,9 +396,9 @@ footer{
 
 
 .tinytext{
-  width: 100px;
+  width: 10vh;
   position: fixed;
-  top: 100px;
+  top: 9vh;
   display: none;
 }
 
@@ -385,23 +427,25 @@ footer{
 
 #p1{
   width: 40vw;
-  height: 60vh;
-  min-width: 500px;
+  height: auto;
   color: rgb(204, 51, 51);
-  left: 15%;
-  top: 56vh;
   overflow: auto;
   z-index: 2;
+  position: static;
+  padding-left: 10vw;
+  padding-top: 35vh;
+  margin: 0;
+  margin-top: 10px;
 }
 
 #p2{
-  width: 40vw;
-  height: 60vh;
   overflow: hidden;
-  top: 130vh;
-  left: 60vw;
-  color: rgb(153,51,102);
+  color: #936;
   z-index: 9999;
+  padding-left: 2vw;
+  margin-right: 10vw;
+  padding-bottom: 5vh;
+  text-align: right;
 }
 
 #p2r{
@@ -410,69 +454,89 @@ footer{
   overflow: hidden;
   top: 130vh;
   left: 60vw;
-  color: rgb(153,51,102);
+  color: #936;
   z-index: 2;
   display: none;
 }
 
 #aboutme{
-  width: 400px;
-  position: absolute;
-  left: 15%;
-  top: 75vh;
+  width: 30vw;
+  position: static;
+  padding-left: 10vw;
+  max-width: 350px;
 }
 
+
 #resume{
-  width: 400px;
-  position: absolute;
-  left: 60%;
-  top: 110vh;
+  width: 20vw;
+  position: static;
+  display: block;
+  padding-top: 15vh;
+  float:right;
+  margin: 0;
+  margin-right: 10vw;
 }
 
 #line{
   width: 50%;
-  height: 2px;
-  position: absolute;
-  top: 72vh;
+  height: 1px;
+  position: static;
+  display: block;
+  top: 41vh;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #line2{
-  width: 40%;
-  height: 2px;
-  position: absolute;
-  top: 125vh;
-  right: 0vw;
+  width: 100%;
+  height: 1px;
+  position: static;
+  display: block;
 }
 
 
 #down{
-  height: 50px;
   display: block;
   position: absolute;
-  bottom: 0vh;
-  left: 50%;
+  bottom: 5vh;
+  padding-top: 5vh;
+  left:0;
+  right:0;
+  margin: auto;
 }
 
-#up{
-  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-  transform: rotate(180deg);
-  height: 50px;
+#down img{
+  height: 20px;
   display: block;
-  position: absolute;
-  top: 101vh;
-  left: 50%;
+  margin: auto;
 }
+
+#down p{
+  text-align: center;
+  margin: 0;
+  font-family: champagne;
+  color: rgb(204, 51, 51);
+  font-size: 10pt;
+}
+
+
 
 
 #lion{
-  height: 45vw;
-  max-height: 600px;
+  width: 50vw;
+  max-width: 600px;
   position: absolute;
-  bottom: -103vh;
+  padding-top: 35vh;
+  padding-bottom: 7vh;
+  left: 0vw;
+
 }
 
-.txt > img{
-  height: 60vh;
+#section1{
+  width: 50vw;
+  float: right;
+  margin-top: 10vh;
 }
 
 
@@ -484,14 +548,17 @@ footer{
   display: inline-block;
 }
 .imgcontainer{
-  height: 300px;
-  margin-top: 10vh;
-
+  height: 35vh;
+  margin-top: 20vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .imgcontainer img{
-  margin: 10vh;
-  height: 30vh;
+  margin: 8vh;
+  margin-bottom: 2vh;
+  height: 25vh;
+  min-height: 150px;
 }
 
 
@@ -508,11 +575,15 @@ footer{
 
 }
 
+
 #shrink{
-  width: 100px;
+  width: 7vh;
+  min-width: 50px;
   position: fixed;
-  top: 8vh;
-  right: 20vw;
+  top: 3vh;
+  right: 10vw;
+  z-index: 9999;
+  display:none;
 }
 
 .graphic:hover{
@@ -523,7 +594,7 @@ footer{
     height: 100vh;
     width: 100vw;
 
-  background-image: url(img/wire.png);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -569,10 +640,11 @@ footer{
 
 
 .work_back{
-  width: 100px;
+  width: 7vh;
+  min-width: 50px;
   position: fixed;
-  top: 8vh;
-  right: 20vw;
+  top: 3vh;
+  right: 10vw;
 }
 
 div.pixupblock > div{
@@ -589,23 +661,24 @@ div.pixupblock > div{
 
 div.pixupblock h3{
   font-family: champagne;
-  font-size: 20pt;
+  font-size: 13pt;
   margin: 10px 0px;
   text-align: center;
-  color: #cc6699;
+  color: black;
 }
 img.project_title{
-  width: 400px;
+  width: 30vh;
+  min-width: 200px;
   display: block;
   position: relative;
   margin: 0 auto;
 }
 
 div.pixupblock p{
-  font-family: champagne;
-  font-size: 18pt;
+  font-family: "ralewayExtraLight";
+  font-size: 12pt;
   margin: 0;
-  color: #cc6699;
+  color: black;
 }
 
 .image{
@@ -686,6 +759,24 @@ div.pixupblock p{
   right: 10vw;
 }
 
+.textviewer{
+  width: 40vw;
+  height: 10vh;
+  position: static;
+  margin: auto;
+  margin-top: 10vh;
+  bottom: 10vh;
+}
+
+.textviewer p{
+  display: none;
+  font-family: champagne;
+  font-size: 12pt;
+  letter-spacing: 0.4pt;
+  color: #936;
+}
+
+
 /**********END OF WORK PAGE STYLING**************/
 
 
@@ -717,12 +808,12 @@ div.pixupblock p{
 
 
 .linkbutton{
-  width: 50px;
-  margin: 10px;
+  width: 40px;
+  margin: 15px;
 }
 .outer p{
   font-family: Champagne;
-  font-size: 20pt;
+  font-size: 17pt;
   text-align: center;
   color: white;
   letter-spacing: 1px;
@@ -763,11 +854,17 @@ div.pixupblock p{
     margin-right: auto;
     width: auto;
 }
+body{
+  overflow: hidden;
+}
 
+#aboutbody{
+  overflow: scroll;
+}
 /**********END OF CONTACT PAGE STYLING**************/
 
 
-@media screen and (max-width: 1025px) and (min-width: 500px){
+@media screen and (max-width: 800px) and (min-width: 500px){
 
 /*WHY WHEN I CHANGE THE POSITION, IT DOESN'T SHOW UP ANYMORE?*/
 
@@ -953,9 +1050,10 @@ div.pixupblock p{
   top: 130vh;
   left: auto;
   right: 5vw;
-  color: rgb(153,51,102);
+  color: #936;
   z-index: 2;
   font-size: 15pt;
+
   z-index: 9999;
   display: none;
 }
@@ -966,7 +1064,7 @@ div.pixupblock p{
   overflow: hidden;
   top: 140vh;
   left: 55vw;
-  color: rgb(153,51,102);
+  color: #936;
   z-index: 2;
   display: inherit;
 }
@@ -1013,22 +1111,17 @@ div.pixupblock p{
   left: 50%;
 }
 
-#up{
-  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-  transform: rotate(180deg);
-  height: 50px;
-  display: block;
-  position: absolute;
-  top: 102vh;
-  left: 50%;
-}
+
 
 
 #lion{
-  left:0vw;
-  height: 400px;
+  width: 50vw;
+  max-width: 600px;
   position: absolute;
-  bottom: -100vh;
+  padding-top: 35vh;
+  padding-bottom: 10vh;
+  left: 0vw;
+
 }
 
 
@@ -1040,7 +1133,7 @@ div.pixupblock p{
 
 #workm{
   height: 100vh;
-  background-image: url(img/carnival.png);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1281,10 +1374,10 @@ div.pixupblock p{
 }
 
 #tinybird2{
-  width: 70px;
+  width: 5vh;
   position: fixed;
-  left: 31vw;
-  top: 0px;
+  left: 38vw;
+  top: 2vh;
   z-index: 9999;
 }
 
@@ -1293,11 +1386,11 @@ div.pixupblock p{
 }
 
 #tinybird3{
-  width: 70px;
+  width: 5vh;
   position: fixed;
   left: auto;
-  right: 25vw;
-  top: 0px;
+  right: 30vw;
+  top: 2vh;
   z-index: 9999;
 }
 
@@ -1312,11 +1405,11 @@ div.pixupblock p{
 }
 
 #tinybird4{
-  width: 70px;
+  width: 5vh;
   position: fixed;
   left: auto;
-  right: 3vw;
-  top: 0vh;
+  right: 5vw;
+  top: 2vh;
   z-index: 9999;
 }
 
@@ -1425,18 +1518,17 @@ img.tinytext{
   display: none;
 }
 
-#up{
-  display: none;
-}
+
 
 
 #lion{
-  display: block;
-  left:0vw;
-  height: auto;
-  width: 100vw;
-  position: inherit;
-  bottom: -100vh;
+  width: 50vw;
+  max-width: 600px;
+  position: absolute;
+  padding-top: 35vh;
+  padding-bottom: 10vh;
+  left: 0vw;
+
 }
 
 #fullpage{
@@ -1589,6 +1681,10 @@ img.tinytext{
 
 #contactheader{
   bottom: 7vh;
+}
+
+body{
+  overflow: hidden;
 }
 /*end of contact page styling*/
 

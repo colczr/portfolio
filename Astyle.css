@@ -1,0 +1,152 @@
+body{
+  margin: 0px;
+}
+
+@font-face{
+  font-family: champagne;
+  src: url(Champagne.ttf);
+}
+
+#bird{
+  width: 500px;
+  position: absolute;
+  left: 60vw;
+  margin-top: 0;
+}
+
+.txt{
+    font-family: champagne;
+    position: absolute;
+    font-size: 17pt;
+}
+
+li{
+  list-style-type: none;
+}
+
+.tinynav{
+  width: 30px;
+  position: fixed;
+  top: 55px;
+}
+
+
+
+#tiny1{
+  left: 40px;
+}
+
+#tiny2{
+  width: 90px;
+  position: absolute;
+  left: 90px;
+
+  top: 20px;
+}
+
+#tiny3{
+  left: 200px;
+}
+
+#tiny4{
+  left: 260px;
+}
+
+
+
+
+#p1{
+  width: 600px;
+  height: 60vh;
+  color: rgb(204, 51, 51);
+  left: 15%;
+  top: 50%;
+  overflow: auto;
+}
+
+#p2{
+  width: 400px;
+  height: 60vh;
+  overflow: scroll;
+  top: 130vh;
+  left: 60vw;
+  color: rgb(153,51,102);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#aboutme{
+  width: 400px;
+  position: absolute;
+  left: 15%;
+  top: 70%;
+}
+
+#resume{
+  width: 400px;
+  position: absolute;
+  left: 60%;
+  top: 110vh;
+}
+
+#line{
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  top: 67%;
+}
+
+#line2{
+  width: 40%;
+  height: 2px;
+  position: absolute;
+  top: 125vh;
+  right: 0vw;
+}
+
+
+#down{
+  height: 50px;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
+
+#up{
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 101vh;
+  left: 50%;
+}
+
+
+#tree{
+  height: 600px;
+  position: absolute;
+  bottom: -103vh;
+}
+
+@media (max-width: 768px) {
+  p{
+    margin-top: 100px;
+    font-family: Raleway;
+  }
+
+  #ydrop{
+    position: fixed;
+    width: 500px;
+    margin-top: 200px;
+    opacity: 0.5;
+  }
+
+  #aboutme{
+    margin-top: 10%;
+    margin-left: 30%
+  }
+}

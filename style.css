@@ -1,0 +1,86 @@
+h1 {
+	font-family: bradley hand itc;
+	font-weight: normal;
+	font-size: 4em;
+}
+
+
+#intro{
+	font-family: Microsoft Yahei UI Light;
+	position: absolute;
+
+	top: 26%;
+	left: 22%;
+}
+
+#introparagraph{
+	font-family: Microsoft Yahei UI Light;
+	font-size: .9em;
+	position: absolute;
+	top: 45%;
+	left: 22%;
+	width: 700px;
+
+}
+
+#box {
+	position: absolute;
+	top: 42%;
+	left: 20%;
+	width: 800px;
+	height: 350px;
+	margin: 0;
+	background-color: #ffffff;
+	opacity: 0.6;
+}
+
+
+#aboutme {
+	position: absolute;
+	top: 11%;
+	left: 21%;
+	margin: 0;
+
+}
+
+#first {
+	position: absolute;
+	top: 70%;
+	left: 19%;
+	margin: 0;
+	background-color: none;
+
+}
+
+#first ul {list-style-type: none;}
+
+#first ul li {display: inline;}
+
+#first ul li a {
+	padding: .2em 1em;
+
+}
+
+html { 
+  background: url(012.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#first a:link{
+	color: black;
+	text-decoration: none;
+	font-family: Microsoft Yahei UI Light;
+}
+
+#first a:visited{
+	color: gray;
+	text-decoration: none;
+}
+
+#first a:hover{
+	color: gray;
+	text-decoration: none;
+}

@@ -36,24 +36,35 @@
     }
 
     onReady(function () {
-      $(".loader").fadeOut(600);
-      $('#workm').fadeIn(800);
+      $(".loader").fadeOut(200);
+      $('#workm').delay(600).fadeIn(800);
+
     });
+
+    document.onmouseover=function(e) {
+      if(e.target.tagName == 'IMG' && e.target.hasAttribute("class")){
+        var imgclass = e.target.getAttribute("class");
+        if(imgclass.indexOf("zzz") >= 0 ){
+          $("img."+imgclass).stop(true,true).fadeOut(500).fadeIn(500);
+        }
+        return;
+      }
+      // $(".textviewer p").stop(true,true).fadeOut(500);
+      return;
+    }
     </script>
 
   </head>
 
   <body id="workbody">
-    <div class="loader" id="loader-wrapper">
-        <div id="loader"></div>
-    </div>
+    <img src="img/loadingicon.gif" class="loader" id="loadingicon" alt="load">
 
 
     <div id="viewer">
       <img id="pic" src="" alt=""/>
-      <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
-    </div>
 
+    </div>
+    <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
     <div id="workm">
 
 
@@ -138,13 +149,19 @@
 
         <div class="imgcontainer">
           <ul>
-            <li><a href="#"><img src="img/collage.png" id="collage" alt="collage"/></a></li>
-            <li><a href="#"><img src="img/pixup.png" id="pixup" alt="about"/></a></li>
-
+            <li><a href="#"><img src="img/collage.png" class="zzzcollage" alt="collage"/></a></li>
+            <li><a href="pixup.html"><img src="img/pixup.png" class="zzzpixup" alt="about"/></a></li>
+            <li><a href="http://www.colinchen.net/opis/"><img src="img/opis.png" class="zzzopis" alt="opis"/></a></li>
           </ul>
 
 
     </div>
+
+    <!-- <div class="textviewer">
+      <p class="zzzcollage">Here includes my graphic design as well as artwork samples. </p>
+      <p class="zzzpixup">pixup is a paid peer-to-peer delivery service that is currently under development. The project incorporates a comprehensive UX design
+        approach. The process includes: Interview, Persona, Storyboard, Prototypes and Usability Tests. </p>
+    </div> -->
 
 
 
@@ -153,8 +170,8 @@
     <div class="pixupblock block">
       <a href="#"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
       <div>
-          <img src="img/pixup_title.png" class="project_title" alt="piXup UX and App Design"/>
-          <p>piXup is a peer-to-peer delivery service that is currently under development. piXup is a platform to
+          <img src="img/pixup_title.png" class="project_title" alt="pixup UX and App Design"/>
+          <p>PixUp is a peer-to-peer delivery service that is currently under development. PixUp is a platform to
             connect vehicle owners (drivers) with residents/businesses that potentially need delivery service (users). Drivers
             pick up requests made by users and offer instant delivery from and/or to the users, who in turn offer monetary compensation
             to the drivers.
@@ -175,9 +192,9 @@
           </p>
         <h3>Comparative Analysis</h3>
         <p>
-          We compared piXup with several competitors that offer express and peer-to-peer delivery services. A total of 7 competitors
+          We compared PixUp with several competitors that offer express and peer-to-peer delivery services. A total of 7 competitors
           (Major competitors: Kanga, Dolly, and UberRush; Minor Competitors: Amazon Fresh, Google Express, UPS, and UHaul) were chosen and evaluated under several different
-          categories. We analyzed and discussed our data and research to create a table that compares piXup to other competitors.
+          categories. We analyzed and discussed our data and research to create a table that compares PixUp to other competitors.
           <img src="img/comp.jpg" class="image comp" alt="comparative analysis"/>
         </p>
       </div>
@@ -204,6 +221,7 @@
     $("#shrink").click(function(){
       var imgsrc = this.getAttribute("src");
       $("#viewer").fadeOut(500);
+      $("#shrink").fadeOut(500);
       $("#workm").fadeTo("fast", 1);
 
     });
@@ -211,6 +229,7 @@
     $(".graphic").click(function(){
       var imgsrc = this.getAttribute("src");
       $("#viewer").fadeIn(500);
+      $("#shrink").fadeIn(500);
       $("#workm").fadeTo("fast", 0.3);
       if ($(this).hasClass("land")){
         $("#pic").attr("src", imgsrc);
@@ -238,14 +257,14 @@
       var fn1 = function(arg1){
         arg1.fadeIn(1000);
         $(".imgcontainer").fadeOut(1000);
-        $("#workm").css({"background-image":"url(img/flying.png)", "transition":"background-image 0.5s"});
+        $(".textviewer").fadeOut(1000);
       }
 
-      $("#pixup").click(function(){
+      $("img.zzzpixup").click(function(){
         fn1($(".pixupblock"));
       });
 
-      $("#collage").click(function(){
+      $("img.zzzcollage").click(function(){
         fn1($(".collageblock"));
       });
 
@@ -254,8 +273,15 @@
       $(".work_back").click(function(){
         $(".pixupblock, .collageblock").fadeOut(1000);
         $(".imgcontainer").fadeIn(1000);
-        $("#workm").css({"background-image":"url(img/wire.png)", "transition":"background-image 0.5s"});
+        $(".textviewer").fadeIn(1000);
+
       });
+
+
+
+
+
+
 
     </script>
   </body>
