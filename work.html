@@ -60,11 +60,7 @@
     <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
 
 
-    <div id="viewer">
-      <img id="pic" src="" alt=""/>
 
-    </div>
-    <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
     <div id="workm">
 
 
@@ -149,13 +145,46 @@
 
         <div class="imgcontainer">
           <ul>
-            <li><a href="#"><img src="img/collage.png" class="zzzcollage" alt="collage"/></a></li>
+            <li><a href="collage.html"><img src="img/collage.png" class="zzzcollage" alt="collage"/></a></li>
             <li><a href="pixup.html"><img src="img/pixup.png" class="zzzpixup" alt="about"/></a></li>
             <li><a href="http://www.colinchen.net/opis/"><img src="img/opis.png" class="zzzopis" alt="opis"/></a></li>
           </ul>
+          <img src="img/buttons/scrolll.png" id="scrollL" alt="scroll"/>
+
+          <img src="img/buttons/scrollr.png" id="scrollR" alt="scroll"/>
+
 
 
     </div>
+
+    <script>
+
+    $(document).ready(function() {
+      var $item = $('.imgcontainer>ul>li'), //Cache your DOM selector
+        visible = 1, //Set the number of items that will be visible
+        index = 0, //Starting index
+        endIndex = ( $item.length / visible ) - 1;
+
+      $('#scrollR').click(function(){
+          if(index < endIndex ){
+            index++;
+            $item.animate({'left':'-=24vw'});
+          }
+
+
+      });
+
+      $('#scrollL').click(function(){
+        if(index > 0){
+          index--;
+          $item.animate({'left':'+=24vw'});
+        }
+      });
+    });
+    </script>
+
+
+
 
     <!-- <div class="textviewer">
       <p class="zzzcollage">Here includes my graphic design as well as artwork samples. </p>
@@ -165,24 +194,9 @@
 
 
 
-    <div class="collageblock block">
-      <a href="#"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
-      <div>
-          <img src="img/collage_title.png" class="project_title" alt="Graphic Design and Artwork"/>
-
-        <div class="collageimg">
-          <img src="img/infograph.jpg" class="graphic infograph" alt="graphic"/>
-          <img src="img/poster.jpg" class="graphic land poster" alt="graphic"/>
-          <img src="img/spain.jpg" class="graphic land spain" alt="graphic"/>
-          <img src="img/greenlake.jpg" class="graphic greenlake" alt="graphic"/>
-          <img src="img/self.jpg" class="graphic self" alt="graphic"/>
-        </div>
-      </div>
-    </div>
 
 
-
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     $("#shrink").click(function(){
       var imgsrc = this.getAttribute("src");
       $("#viewer").fadeOut(500);
@@ -219,33 +233,33 @@
     // });
 
 
-      var fn1 = function(arg1){
-        arg1.fadeIn(1000);
-        $(".imgcontainer").fadeOut(1000);
-        $(".textviewer").fadeOut(1000);
-      }
+      // var fn1 = function(arg1){
+      //   arg1.fadeIn(1000);
+      //   $(".imgcontainer").fadeOut(1000);
+      //   $(".textviewer").fadeOut(1000);
+      // }
+      //
+      //
+      //
+      // $("img.zzzcollage").click(function(){
+      //   fn1($(".collageblock"));
+      // });
+      //
+      //
+      //
+      // $(".work_back").click(function(){
+      //   $(".pixupblock, .collageblock").fadeOut(1000);
+      //   $(".imgcontainer").fadeIn(1000);
+      //   $(".textviewer").fadeIn(1000);
+      //
+      // });
 
 
 
-      $("img.zzzcollage").click(function(){
-        fn1($(".collageblock"));
-      });
-
-
-
-      $(".work_back").click(function(){
-        $(".pixupblock, .collageblock").fadeOut(1000);
-        $(".imgcontainer").fadeIn(1000);
-        $(".textviewer").fadeIn(1000);
-
-      });
 
 
 
 
-
-
-
-    </script>
+    </script> -->
   </body>
 </html>

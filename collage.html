@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="PStyle.css" >
+    <link rel="icon" type="image/png" href="img/header.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+
+    <script>
+      // $(window).load(function() {
+      //   // Animate loader off screen
+      //   $(".loader").fadeOut(500);
+      // });
+      // $(document).ready(function() {
+      //   $('#workm').delay(500).fadeIn(500);
+      // });
+
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 1000);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      $(".loader").fadeOut(300);
+      $('#workm').fadeIn(500);
+
+    });
+
+    document.onmouseover=function(e) {
+      if(e.target.tagName == 'IMG' && e.target.hasAttribute("class")){
+        var imgclass = e.target.getAttribute("class");
+        if(imgclass.indexOf("zzz") >= 0 ){
+          $("img."+imgclass).stop(true,true).fadeOut(500).fadeIn(500);
+        }
+        return;
+      }
+      // $(".textviewer p").stop(true,true).fadeOut(500);
+      return;
+    }
+    </script>
+
+  </head>
+
+  <body id="workbody">
+    <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
+
+
+    <div id="viewer">
+      <img id="pic" src="" alt=""/>
+
+    </div>
+    <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
+    <div id="workm">
+
+
+      <div id="tinynavbg">
+      </div>
+
+      <div id="tinynavbgfixed">
+      </div>
+
+
+        <nav>
+          <ul class="navigator">
+            <li>
+              <a href="#" id="bloglink">
+                <img src="img/buttons/nav1.png" class="tinynav" id="tiny1" alt="blogh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" id="aboutlink">
+                <img src="img/buttons/nav2.png" class="tinynav" id="tiny2" alt="abouth"/>
+              </a>
+            </li>
+
+            <li>
+                <a href="work.html" id="worklink">
+                <img src="img/buttons/bird3.png" id="tinybird3" alt="workh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html" id="contactlink">
+                <img src="img/buttons/nav4.png" class="tinynav" id="tiny4" alt="cnotacth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html" id="homelink">
+                <img src="img/buttons/back.gif" class="tinynav" id="tiny5" alt="backh"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <script type="text/javascript">
+        if (document.documentElement.clientWidth > 1025) {
+          $(".tinynav").hover(function(){
+            $(".tinyworktext").stop(true, true).fadeOut("fast");
+          },function(){
+            $(".tinyworktext").stop(true, true).fadeIn("fast");
+          })
+
+          $("#tiny1").hover(function(){
+            $(".tinyblogtext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyblogtext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny2").hover(function(){
+            $(".tinyabouttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyabouttext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny4").hover(function(){
+            $(".tinycontacttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinycontacttext").stop(true, true).fadeOut("fast");
+          })
+        }
+        </script>
+
+        <div class="textcontainer">
+          <ul>
+            <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
+            <li><img src="img/buttons/about1.png" class="tinytext tinyabouttext" alt="about"/></li>
+            <li><img src="img/buttons/work1.png" class="tinytext tinyworktext tinydisplay" alt="work"/></li>
+            <li><img src="img/buttons/contact1.png" class="tinytext tinycontacttext" alt="contact"/></li>
+          </ul>
+
+        </div>
+
+
+
+
+    <div class="collageblock block">
+      <a href="work.html"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
+      <div>
+          <img src="img/collage_title.png" class="project_title" alt="Graphic Design and Artwork"/>
+
+        <div class="collageimg">
+          <div class="thumb" style="background-image: url(img/infograph.jpg)"><p>img/infograph.jpg</p></div>
+          <div class="thumb" style="background-image: url(img/homepage.jpg)"><p>img/homepage.jpg</p></div>
+          <div class="thumb" style="background-image: url(img/finalproject.png)"><p>img/finalproject.png</p></div>
+          <div class="thumb" style="background-image: url(img/poster.jpg)"><p class="land">img/poster.jpg</p></div>
+          <div class="thumb" style="background-image: url(img/spain.jpg)"><p class="land">img/spain.jpg</p></div>
+          <div class="thumb" style="background-image: url(img/greenlake.jpg)"><p>img/greenlake.jpg</p></div>
+          <div class="thumb" style="background-image: url(img/self.jpg)"><p>img/self.jpg</p></div>
+          <div class="thumb" style="background-image: url(img/logotype.png)"><p class="land">img/logotype.png</p></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+    $("#shrink").click(function(){
+      var imgsrc = this.getAttribute("src");
+      $("#viewer").fadeOut(500);
+      $("#shrink").fadeOut(500);
+      $("#workm").fadeTo("fast", 1);
+
+    });
+
+    $(".thumb>p").click(function(){
+      var imgsrc = $(this).text();
+      $("#viewer").fadeIn(500);
+      $("#shrink").fadeIn(500);
+      $("#workm").fadeTo("fast", 0.3);
+      if ($(this).hasClass("land")){
+        $("#pic").attr("src", imgsrc);
+        $("#pic").attr("style", "width: 55vw; display: block; margin: auto;");
+        return;
+      }
+        $("#pic").attr("src", imgsrc);
+        $("#pic").attr("style", "width: 35vw; display: block; margin: auto;");
+        return;
+
+    });
+
+    </script>
+  </body>
+</html>

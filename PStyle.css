@@ -4,6 +4,9 @@
 
 
 
+
+
+
 #loadingicon{
   position: fixed;
   bottom: 0;
@@ -498,7 +501,7 @@ footer img{
 #down p{
   text-align: center;
   margin: 0;
-  font-family: champagne;
+  font-family: Champagne;
   color: rgb(204, 51, 51);
   font-size: 10pt;
 }
@@ -540,19 +543,32 @@ footer img{
 /*WORK PAGE STYLING*/
 .imgcontainer > ul > li{
   display: inline-block;
-}
-.imgcontainer{
-  height: 35vh;
-  margin-top: 20vh;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  position: relative;
 }
 
+.imgcontainer > ul{
+  width: 150vw;
+  padding: 0;
+}
+
+
+.imgcontainer{
+  height: 50vh;
+  width: 69vw;
+  position: fixed;
+  top: 30vh;
+  left:0;
+  right:0;
+  margin: auto;
+  overflow:hidden;
+}
+
+
+
 .imgcontainer img{
-  margin: 8vh;
-  margin-bottom: 2vh;
-  height: 25vh;
-  min-height: 150px;
+  margin: 4vw;
+  width: 15vw;
+  min-width: 100px;
 }
 
 
@@ -580,7 +596,7 @@ footer img{
   display:none;
 }
 
-.graphic:hover{
+.thumb:hover{
   cursor: pointer;
 }
 
@@ -612,25 +628,36 @@ footer img{
   z-index: -1;
   padding: 5vh;
   padding-top: 0vh;
-  display: none;
+
 
 }
 
 .graphic{
-  margin-left: 50px;
-  margin-top: 50px;
-  height: 20vh;
+  width: 100%;
 }
 
-.infograph{
-
+.thumb{
+  width: 13vw;
+  height: 13vw;
+  margin: 2vw;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
 }
 
-.poster{
-
+.thumb > p {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
 }
 
-
+.collageimg{
+  width: 70vw;
+  position: static;
+  margin: auto;
+}
 
 .work_back{
   width: 7vh;
@@ -639,6 +666,8 @@ footer img{
   top: 3vh;
   right: 10vw;
 }
+
+
 
 div.pixupblock > div{
   height: 100%;
@@ -658,7 +687,7 @@ div.pixupblock {
 }
 
 div.pixupblock h3{
-  font-family: champagne;
+  font-family: Champagne;
   width: 15vw;
   font-size: 13pt;
   margin: 10px 0px;
@@ -676,7 +705,7 @@ img.project_title{
 }
 
 div.pixupblock p{
-  font-family: "ralewayExtraLight";
+  font-family: ralewayExtraLight;
   width: 69vw;
   margin: 10px 0px;
   font-size: 12pt;
@@ -751,7 +780,7 @@ div.pixupblock p{
 
 .imgtitle{
   position: absolute;
-  font-family: champagne;
+  font-family: Champagne;
   top: 22vh;
   color: #993366;
   font-size: 20pt;
@@ -785,12 +814,37 @@ div.pixupblock p{
 
 .textviewer p{
   display: none;
-  font-family: champagne;
+  font-family: Champagne;
   font-size: 12pt;
   letter-spacing: 0.4pt;
   color: #936;
 }
 
+#scrollR{
+  position: fixed;
+  width: 5vw;
+  right: 2vw;
+  top: 40vh;
+  min-width: 50px;
+
+}
+
+#scrollR:hover{
+  cursor: pointer;
+}
+
+#scrollL{
+  position: fixed;
+  width: 5vw;
+  left: 2vw;
+  top: 40vh;
+  min-width: 50px;
+
+}
+
+#scrollL:hover{
+  cursor: pointer;
+}
 
 /**********END OF WORK PAGE STYLING**************/
 
