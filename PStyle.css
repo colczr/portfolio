@@ -1128,12 +1128,12 @@ img.tinytext{
 #bird {
     width: 40vw;
     max-width: 380px;
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: static;
     margin: auto;
     display: block;
-    top: 15vh;
+    padding-top: 5vh;
+    padding-bottom: 7vh;
+
 }
 
 #lion {
@@ -1143,6 +1143,7 @@ img.tinytext{
     display: block;
     padding: 5vw 0;
     margin: auto;
+    display: none;
 }
 
 #section0{
@@ -1156,7 +1157,7 @@ img.tinytext{
 #p1{
   width: 80vw;
   padding: 0;
-  padding-top: 35vh;
+  padding-top: 5vh;
   margin: auto;
 }
 
@@ -1165,6 +1166,7 @@ img.tinytext{
   padding: 0;
   margin: auto;
   text-align: left;
+  padding-bottom: 5vh;
 }
 
 #section1{
