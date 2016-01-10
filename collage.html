@@ -184,14 +184,19 @@
       $("#viewer").fadeIn(500);
       $("#shrink").fadeIn(500);
       $("#workm").fadeTo("fast", 0.3);
-      if ($(this).hasClass("land")){
-        $("#pic").attr("src", imgsrc);
-        $("#pic").attr("style", "width: 55vw; display: block; margin: auto;");
-        return;
-      }
+      if (document.documentElement.clientWidth > 1025) {
+        if ($(this).hasClass("land")){
+          $("#pic").attr("src", imgsrc);
+          $("#pic").attr("style", "width: 55vw; display: block; margin: auto;");
+          return;
+        }
         $("#pic").attr("src", imgsrc);
         $("#pic").attr("style", "width: 35vw; display: block; margin: auto;");
         return;
+      } else {
+        $("#pic").attr("src", imgsrc);
+        $("#pic").attr("style", "width:100%; display: block; margin: auto;");
+      }
 
     });
 
