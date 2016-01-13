@@ -567,8 +567,8 @@ footer img{
 
 
 .imgcontainer img{
-  margin: 4vw;
-  width: 15vw;
+  margin: 5vw;
+  width: 13vw;
   min-width: 100px;
 }
 
@@ -720,13 +720,8 @@ div.pixupblock p{
   margin: auto;
 }
 
-.persona{
-  width: 30vw;
-  margin-top: 2vw;
-  margin-right: 2vw;
-}
 
-.storyboard, .wireframe{
+.storyboard, .wireframe, .persona{
   width: 60vw;
   margin: 2vh;
 
@@ -1045,7 +1040,7 @@ body{
 }
 
 #tinybird2{
-  width: 30px;
+  width: 35px;
   position: fixed;
   left: 37vw;
   top: 12px;
@@ -1057,11 +1052,11 @@ body{
 }
 
 #tinybird3{
-  width: 5vh;
+  width: 35px;
   position: fixed;
   left: auto;
   right: 31vw;
-  top: 2vh;
+  top: 12px;
   z-index: 9999;
 }
 
@@ -1072,15 +1067,15 @@ body{
 
 #tiny4{
   left: auto;
-  right: 10vw;
+  right: 9vw;
 }
 
 #tinybird4{
-  width: 5vh;
+  width: 35px;
   position: fixed;
   left: auto;
   right: 5vw;
-  top: 1vh;
+  top: 12px;
   z-index: 9999;
 }
 

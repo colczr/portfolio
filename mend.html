@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="PStyle.css" >
+    <link rel="icon" type="image/png" href="img/header.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+
+    <script>
+      // $(window).load(function() {
+      //   // Animate loader off screen
+      //   $(".loader").fadeOut(500);
+      // });
+      // $(document).ready(function() {
+      //   $('#workm').delay(500).fadeIn(500);
+      // });
+
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 700);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      $(".loader").fadeOut(200);
+      $('#workm').fadeIn(500);
+      $('.block').fadeIn(500);
+    });
+
+
+    </script>
+
+  </head>
+
+  <body id="workbody">
+    <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
+
+
+    <div id="viewer">
+      <img id="pic" src="" alt=""/>
+
+    </div>
+    <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
+    <div id="workm">
+
+
+      <div id="tinynavbg">
+      </div>
+
+      <div id="tinynavbgfixed">
+      </div>
+
+
+        <nav>
+          <ul class="navigator">
+            <li>
+              <a href="https://colchen.wordpress.com/" target="_blank" id="bloglink">
+                <img src="img/buttons/nav1.png" class="tinynav" id="tiny1" alt="blogh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" id="aboutlink">
+                <img src="img/buttons/nav2.png" class="tinynav" id="tiny2" alt="abouth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="work.html" id="worklink">
+                <img src="img/buttons/bird3.png" id="tinybird3" alt="workh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html" id="contactlink">
+                <img src="img/buttons/nav4.png" class="tinynav" id="tiny4" alt="cnotacth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html" id="homelink">
+                <img src="img/buttons/back.gif" class="tinynav" id="tiny5" alt="backh"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <script type="text/javascript">
+        if (document.documentElement.clientWidth > 1025) {
+          $(".tinynav").hover(function(){
+            $(".tinyworktext").stop(true, true).fadeOut("fast");
+          },function(){
+            $(".tinyworktext").stop(true, true).fadeIn("fast");
+          })
+
+          $("#tiny1").hover(function(){
+            $(".tinyblogtext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyblogtext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny2").hover(function(){
+            $(".tinyabouttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyabouttext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny4").hover(function(){
+            $(".tinycontacttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinycontacttext").stop(true, true).fadeOut("fast");
+          })
+        }
+        </script>
+
+        <div class="textcontainer">
+          <ul>
+            <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
+            <li><img src="img/buttons/about1.png" class="tinytext tinyabouttext" alt="about"/></li>
+            <li><img src="img/buttons/work1.png" class="tinytext tinyworktext tinydisplay" alt="work"/></li>
+            <li><img src="img/buttons/contact1.png" class="tinytext tinycontacttext" alt="contact"/></li>
+          </ul>
+
+        </div>
+
+
+
+    <div class="pixupblock block">
+      <a href="work.html"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
+      <div>
+          <img src="img/mend_title.png" class="project_title" alt="mend UX and App Design"/>
+          <h3>Overview</h3>
+          <p>Timeline: 10/2015 - 03/2016 (In Progress)<br>
+            Project: Innovation in Action<br>
+            Team size: 5<br>
+            Type: App/UX design<br><br>
+            Mend is a health app that aims to improves communication between patients with mental conditions and their therapist and health provider.
+            Mend provides daily logs for the patient to record their mood, diary and a variety of measures to share with the therapist. The therapist
+            can customize the content for the patient and utilize the data collected from the patient to better customize the therapy as well as discovering
+            problems in an efficient manner.</p>
+          <h3>UX Methods</h3>
+          <p>Interview | Persona &amp; Scenario | Wireframe | Heuristic Evaluation</p>
+          <hr>
+          <h3>Interview and Persona</h3>
+          <p>We interviewed 4 professional psychologists and social workers (therapists) and 10 people who had diagnosed depression.
+            <br>The interview questions for the therapists include <br>- details of the therapists' interaction with their patients, <br>- their biggest
+            frustration during their work, <br>- what they think prevents the patient from getting better, and <br> - if there is a mobile app platform
+            to assit them, what would they want it to be.<br> We asked the people with past mental conditions about their experience with condition and what they think would be
+            helpful for them during their depressed periods.
+            <br>We analyzed and prioritized the common concerns shared by the therapists and the patients and generated two personae for the therapist and the patient.
+            <br><img src="img/persona_4.png" class="image persona" alt="persona_4"/><br>
+            <img src="img/persona_5.png" class="image persona" alt="persona_5"/>
+
+
+          </p>
+
+        <br><hr>
+        <h3>Storyboard</h3>
+          <p>We used Bitstrips to create our storyboard based on the persona. We designed the flow for the interaction
+            between the users and the app. It describes the scenario with visual illustrations for the clarity of the flow.
+            The storyboards shows the context, the problem, users' pain point, fear, and motivation.
+            <br><img src="img/storyboard_mend.png" class="image storyboard" alt="mend_storyboard"/>
+          </p>
+        <br><hr>
+        <!-- <h3>Competitive Analysis</h3>
+        <p>
+          We compared PixUp with several competitors that offer express and peer-to-peer delivery services. A total of 7 competitors
+          (Major competitors: Kanga, Dolly, and UberRush; Minor Competitors: Amazon Fresh, Google Express, UPS, and UHaul) were chosen and evaluated under several different
+          categories. We analyzed and discussed our data and research to create a table that compares PixUp to other competitors.
+          <br><img src="img/comp.jpg" class="image comp" alt="Competitive analysis"/>
+        </p>
+        <br><hr> -->
+        <!-- <h3>Wireframes</h3>
+        <p>
+          We created wireframes for driver and user based on our findings in the user interview, storyboard
+          as well as competitive analysis. Here only driver's wireframe is listed below.
+          <br><img src="img/driverwireframe.png" class="image wireframe" alt="Wireframe"/>
+        </p>
+        <br><hr>
+        <h3>Usability Test</h3>
+        <p>
+          3 customer and 2 driver testers were recruited to complete 5 and 4 tasks, respectively. Our
+          team also developed pre and post questions for the tasks. We discovered how users perceive
+          the app as well as various issues that they have encountered.
+          <br>Based on the findings, we adjusted details on the user interface and added various extra
+          pages in the user interface as well.
+
+          <br><img src="img/script.png" class="image script" alt="script"/>
+          <img src="img/script2.png" class="image script" alt="script"/>
+        </p>
+        <h3>High-Fidelity Prototype Samples</h3>
+        <p>
+          Hi-Fi prototypes are generated based on modifications from usability test.
+
+          <br><img src="img/hifi.png" class="image hifi" alt="hifi"/>
+        </p> -->
+      </div>
+    </div>
+
+
+
+    </script>
+  </body>
+</html>
