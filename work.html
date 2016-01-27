@@ -142,7 +142,7 @@
           </ul>
 
         </div>
-<!-- 
+<!--
         <div calss="categories">
           <ul>
             <li>All Work</li>
@@ -158,6 +158,7 @@
             <li><a href="pixup.html"><img src="img/pixup.png" class="zzzpixup" alt="about"/></a></li>
             <li><a href="mend.html"><img src="img/mend.png" class="zzzmend" alt="about"/></a></li>
             <li><a href="http://www.colinchen.net/opis/"><img src="img/opis.png" class="zzzopis" alt="opis"/></a></li>
+            <li><a href="sp3.html"><img src="img/sp3.png" class="zzzsp3" alt="about"/></a></li>
           </ul>
           <img src="img/buttons/scrolll.png" id="scrollL" alt="scroll"/>
 
@@ -173,12 +174,12 @@
       var $item = $('.imgcontainer>ul>li'), //Cache your DOM selector
         visible = 1, //Set the number of items that will be visible
         index = 0, //Starting index
-        endIndex = ( $item.length / visible ) - 1;
+        endIndex = ( $item.length / visible ) - 2;
 
       $('#scrollR').click(function(){
           if(index < endIndex ){
-            index++;
-            $item.animate({'left':'-=24vw'});
+            index+=3;
+            $item.animate({'left':'-=72vw'});
           }
 
 
@@ -186,8 +187,8 @@
 
       $('#scrollL').click(function(){
         if(index > 0){
-          index--;
-          $item.animate({'left':'+=24vw'});
+          index-=3;
+          $item.animate({'left':'+=72vw'});
         }
       });
     });

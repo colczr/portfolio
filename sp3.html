@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="PStyle.css" >
+    <link rel="icon" type="image/png" href="img/header.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+
+    <script>
+      // $(window).load(function() {
+      //   // Animate loader off screen
+      //   $(".loader").fadeOut(500);
+      // });
+      // $(document).ready(function() {
+      //   $('#workm').delay(500).fadeIn(500);
+      // });
+
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 700);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      $(".loader").fadeOut(200);
+      $('#workm').fadeIn(500);
+      $('.block').fadeIn(500);
+    });
+
+
+    </script>
+
+  </head>
+
+  <body id="workbody">
+    <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
+
+
+    <div id="viewer">
+      <img id="pic" src="" alt=""/>
+
+    </div>
+    <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
+    <div id="workm">
+
+
+      <div id="tinynavbg">
+      </div>
+
+      <div id="tinynavbgfixed">
+      </div>
+
+
+        <nav>
+          <ul class="navigator">
+            <li>
+              <a href="https://colchen.wordpress.com/" target="_blank" id="bloglink">
+                <img src="img/buttons/nav1.png" class="tinynav" id="tiny1" alt="blogh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" id="aboutlink">
+                <img src="img/buttons/nav2.png" class="tinynav" id="tiny2" alt="abouth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="work.html" id="worklink">
+                <img src="img/buttons/bird3.png" id="tinybird3" alt="workh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html" id="contactlink">
+                <img src="img/buttons/nav4.png" class="tinynav" id="tiny4" alt="cnotacth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html" id="homelink">
+                <img src="img/buttons/back.gif" class="tinynav" id="tiny5" alt="backh"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <script type="text/javascript">
+        if (document.documentElement.clientWidth > 1025) {
+          $(".tinynav").hover(function(){
+            $(".tinyworktext").stop(true, true).fadeOut("fast");
+          },function(){
+            $(".tinyworktext").stop(true, true).fadeIn("fast");
+          })
+
+          $("#tiny1").hover(function(){
+            $(".tinyblogtext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyblogtext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny2").hover(function(){
+            $(".tinyabouttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyabouttext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny4").hover(function(){
+            $(".tinycontacttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinycontacttext").stop(true, true).fadeOut("fast");
+          })
+        }
+        </script>
+
+        <div class="textcontainer">
+          <ul>
+            <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
+            <li><img src="img/buttons/about1.png" class="tinytext tinyabouttext" alt="about"/></li>
+            <li><img src="img/buttons/work1.png" class="tinytext tinyworktext tinydisplay" alt="work"/></li>
+            <li><img src="img/buttons/contact1.png" class="tinytext tinycontacttext" alt="contact"/></li>
+          </ul>
+
+        </div>
+
+
+
+    <div class="pixupblock block">
+      <a href="work.html"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
+      <div>
+          <img src="img/sp3_title.png" class="project_title" alt="SP3 web app redesign"/>
+          <h3>Overview</h3>
+          <p>Timeline: 01/2016<br>
+            Project: Personal<br>
+            Type: Web App Redesign<br><br>
+            SP3 is a seismic performance prediction tool that enables engineers to quickly obtain a comprehensive prediction of building
+            damage through our carefully designed and user-friendly application.<br><br>
+            Original Product Overview: <br>
+            <iframe width="560" height="400" src="https://www.youtube.com/embed/m1ZbAEIv9SU" frameborder="0" allowfullscreen></iframe><br>
+            </p>
+          <hr>
+          <h3>Problems Found</h3>
+          <p>1.	Too many jargons on the SP3 tool. It is very hard for laypeople to understand all the terminologies and use the tool.<br>
+             2.	The process is too lengthy and provides too much details/information. It also appears that in the tutorial most
+               fields used default value to run the analysis. However, these fields are still shown to the client. <br>
+             3.	The user flow is not very intuitive nor friendly. <br>
+            <br>
+
+
+
+          </p>
+
+        <br><hr>
+        <h3>Solutions</h3>
+          <p>
+            •	I created a standalone version of the software in an “easy mode”. While all the internal process is the same, the easy mode only presents minimal necessary information and uses most common values for each field based on the information given by the user.
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;a.	Example: If the building address is 123 Main Street, AA, 48105, the building age is around 50 years. The software will look in a database to find the most common values for the fields based on all the other buildings with similar statistics, e.g. all the buildings within a 10-mile radius to 123 Main Street with building age between 45-55 years. Then it will fill the fields with these values.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;b.	For more specific data that cannot be generated through step a., the software will prompt the users to enter these data. However, there will be an option to help the user figure out the value by asking the user some specific questions that are easy to answer, and speculate the value based on these answers. (e.g. does your building shake when you stomp on the floor? Yes -> made of wood. No -> made of concrete)
+            <br><br>•	The dashboard gives a summary overview of the analysis by expanding upon clicking. This saves the user’s time and presents them with all the essential information from the analysis.
+            <br><br>•	The user does not get redirected back to the dashboard after creating the project as shown in the tutorial. The user is guided through the whole process without being automatically redirected to the dashboard.
+            <br><br>•	The analysis option is moved to be the last step. This makes the process more intuitive.
+            <br><br>•	Every terminology that might be confusing to the user has an information icon. By hovering over the icon, the user can see the definition of the terminology explained in a way that any layperson could understand.
+            <br><br>•	The result is presented with an interactive graph. The user is able to get specific values from the graph by hovering their mouse and move it along the graph. This way the user can not only get a visual representation of the graph, but is also to have accurate data for exact points on the graph.
+
+          </p>
+        <br><hr>
+
+        <h3>Wireframe</h3>
+        <p>
+          <a href="img/sp3_wireframe.png"><img src="img/sp3_wireframe.png" class="image comp" alt="sp3_wireframe"/></a>
+
+        </p>
+        <br>
+
+        <!-- <h3>Usability Test</h3>
+        <p>
+          3 customer and 2 driver testers were recruited to complete 5 and 4 tasks, respectively. Our
+          team also developed pre and post questions for the tasks. We discovered how users perceive
+          the app as well as various issues that they have encountered.
+          <br>Based on the findings, we adjusted details on the user interface and added various extra
+          pages in the user interface as well.
+
+          <br><img src="img/script.png" class="image script" alt="script"/>
+          <img src="img/script2.png" class="image script" alt="script"/>
+        </p>
+        <h3>High-Fidelity Prototype Samples</h3>
+        <p>
+          Hi-Fi prototypes are generated based on modifications from usability test.
+
+          <br><img src="img/hifi.png" class="image hifi" alt="hifi"/>
+        </p> -->
+      </div>
+    </div>
+
+
+
+    </script>
+  </body>
+</html>
