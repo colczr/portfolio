@@ -112,7 +112,7 @@
 
 .abouttextcontainer{
   width: 100vw;
-  height: 13vh;
+  height: 13.5vh;
   background-color: white;
   z-index: 9998;
   position: fixed;
@@ -342,7 +342,7 @@ footer img{
   width: 6vh;
   position: fixed;
   left: 190px;
-  top: 20px;
+  top: 3vh;
 }
 
 #tiny2{
@@ -353,7 +353,7 @@ footer img{
   width: 6vh;
   position: fixed;
   left: 300px;
-  top: 20px;
+  top: 3vh;
 }
 
 #tiny3{
@@ -368,7 +368,7 @@ footer img{
   width: 6vh;
   position: fixed;
   left: 410px;
-  top: 20px;
+  top: 3vh;
 }
 
 #tiny5{
@@ -384,7 +384,7 @@ footer img{
 }
 
 .tinyblogtext{
-  left: 70px;
+  left: 80px;
 }
 
 .tinyabouttext{
@@ -397,11 +397,11 @@ footer img{
 
 
 .tinyworktext{
-  left: 280px;
+  left: 290px;
 }
 
 .tinycontacttext{
-  left: 390px;
+  left: 400px;
 }
 
 
@@ -519,11 +519,9 @@ footer img{
   width: 28vw;
   min-width: 250px;
   max-width: 380px;
-  position: static;
-  right: 8vw;
   margin-top: 0;
   display: inline-block;
-  top: 15vh;
+
 }
 
 #section0 > div{
@@ -548,26 +546,27 @@ footer img{
 }
 
 .imgcontainer > ul{
-  width: 150vw;
+  width: 71vw;
+  overflow: scroll; 
   padding: 0;
 }
 
 
 .imgcontainer{
-  height: 50vh;
-  width: 69vw;
-  position: fixed;
-  top: 30vh;
+  height: auto;
+  width: 75vw;
   left:0;
   right:0;
+  overflow:scroll; 
   margin: auto;
-  overflow:hidden;
+  margin-top: 15vh;
+
 }
 
 
 
 .imgcontainer img{
-  margin: 5vw;
+  margin: 2vw 5vw;
   width: 13vw;
   min-width: 100px;
 }
@@ -819,7 +818,7 @@ div.pixupblock p{
 #scrollR{
   position: fixed;
   width: 5vw;
-  right: 2vw;
+  right: -10vw;
   top: 40vh;
   min-width: 50px;
 
@@ -832,7 +831,7 @@ div.pixupblock p{
 #scrollL{
   position: fixed;
   width: 5vw;
-  left: 2vw;
+  left: -10vw;
   top: 40vh;
   min-width: 50px;
 
@@ -932,6 +931,12 @@ body{
 @media screen and (max-width: 800px){
 
 /*homepage styling*/
+
+
+.imgcontainer > ul > li{
+  display: block;
+  position: relative;
+}
 
   #blogh{
     width: 35px;
@@ -1135,7 +1140,7 @@ img.tinytext{
 #bird {
     width: 40vw;
     max-width: 380px;
-    position: static;
+    position: relative;
     margin: auto;
     display: block;
     padding-top: 5vh;

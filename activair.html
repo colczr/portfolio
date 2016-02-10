@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work</title>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="PStyle.css" >
+    <link rel="icon" type="image/png" href="img/header.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-73154932-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script>
+      // $(window).load(function() {
+      //   // Animate loader off screen
+      //   $(".loader").fadeOut(500);
+      // });
+      // $(document).ready(function() {
+      //   $('#workm').delay(500).fadeIn(500);
+      // });
+
+      function onReady(callback) {
+      var intervalID = window.setInterval(checkReady, 700);
+      function checkReady() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+              window.clearInterval(intervalID);
+              callback.call(this);
+          }
+        }
+      }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      $(".loader").fadeOut(200);
+      $('#workm').fadeIn(500);
+      $('.block').fadeIn(500);
+    });
+
+
+    </script>
+
+  </head>
+
+  <body id="workbody">
+    <img src="img/carouselrotate.gif" class="loader" id="loadingicon" alt="load">
+
+
+    <div id="viewer">
+      <img id="pic" src="" alt=""/>
+
+    </div>
+    <a href="#"><img id="shrink" src="img/buttons/shrink.png" alt="shrink"/>
+    <div id="workm">
+
+
+      <div id="tinynavbg">
+      </div>
+
+      <div id="tinynavbgfixed">
+      </div>
+
+
+        <nav>
+          <ul class="navigator">
+            <li>
+              <a href="https://colchen.wordpress.com" target="_blank" id="bloglink">
+                <img src="img/buttons/nav1.png" class="tinynav" id="tiny1" alt="blogh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" id="aboutlink">
+                <img src="img/buttons/nav2.png" class="tinynav" id="tiny2" alt="abouth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="work.html" id="worklink">
+                <img src="img/buttons/bird3.png" id="tinybird3" alt="workh"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html" id="contactlink">
+                <img src="img/buttons/nav4.png" class="tinynav" id="tiny4" alt="cnotacth"/>
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html" id="homelink">
+                <img src="img/buttons/back.gif" class="tinynav" id="tiny5" alt="backh"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <script type="text/javascript">
+        if (document.documentElement.clientWidth > 1025) {
+          $(".tinynav").hover(function(){
+            $(".tinyworktext").stop(true, true).fadeOut("fast");
+          },function(){
+            $(".tinyworktext").stop(true, true).fadeIn("fast");
+          })
+
+          $("#tiny1").hover(function(){
+            $(".tinyblogtext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyblogtext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny2").hover(function(){
+            $(".tinyabouttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinyabouttext").stop(true, true).fadeOut("fast");
+          })
+
+          $("#tiny4").hover(function(){
+            $(".tinycontacttext").stop(true, true).fadeIn("fast");
+          },function(){
+            $(".tinycontacttext").stop(true, true).fadeOut("fast");
+          })
+        }
+        </script>
+
+        <div class="textcontainer">
+          <ul>
+            <li><img src="img/buttons/blog1.png" class="tinytext tinyblogtext" alt="blog"/></li>
+            <li><img src="img/buttons/about1.png" class="tinytext tinyabouttext" alt="about"/></li>
+            <li><img src="img/buttons/work1.png" class="tinytext tinyworktext tinydisplay" alt="work"/></li>
+            <li><img src="img/buttons/contact1.png" class="tinytext tinycontacttext" alt="contact"/></li>
+          </ul>
+
+        </div>
+
+
+
+    <div class="pixupblock block">
+      <a href="work.html"><img src="img/buttons/back.png" class="work_back" alt="back"/></a>
+      <div>
+          <img src="img/activairtitle.png" class="project_title" alt="SP3 web app redesign"/>
+          <h3>Overview</h3>
+          <p>Timeline: 01/2016<br>
+            Project: Personal<br>
+            Type: Web App Redesign<br><br>
+            Activair is designed for flyers stuck at airport over a long period of time due to unexpected reasons. It provides a “chat-room” like facility for people to organize activities with fellow travelers in the airport.
+            <br>
+          </p>
+          <hr>
+          <h3>Problems</h3>
+          <p>As a frequent traveler myself, the biggest pain points that I had during long layovers (especially the unexpected ones) are:
+            <br><br>1.	Lack of activities to do. Staring at computer/phone screen gets tiring, and
+            <br>2.	Lodging is expensive when not planned ahead.
+            <br>
+            <br>
+
+
+
+          </p>
+
+        <br><hr>
+        <h3>Solutions</h3>
+          <p>
+            These pain points can be solved by an app that connects people with the same interests to organize fun 
+            activities together. Whether you want to kill time, or try to find a buddy to share a hotel room, there 
+            are probably people who are stuck in the airport and are looking for the same. 
+            <br><br>It is nevertheless intimidating to reach out to others in person because you wouldn’t know what 
+            others are looking for. Therefore, to solve the problem, I created this app to connect people with similar 
+            interests: whether you want to grab a beer and talk about Hockey with someone, or you want to find someone 
+            to share a hotel room with, you can ask and there will be people like you.  
+            <img src="img/flow.png" class="image storyboard" alt="activair_flow"/><br>
+            The users will be able to use the app to create a “activity room” and have it visible in a list of rooms. Other users are able to filter different rooms by choosing the tags that they find interesting, the tags include but are not limited to: beer, chat, friend, flight destination, board games, etc. After choosing a room, the users are able to ask to join. The system would prompt the current participants in the room to vote for the new user to join. If more than half of the people vote yes then the user receives an invitation to join, which they could deny or accept.
+
+            <br><br>After accepting the invitation, the user is given a map of the airport they are currently located in and with pins indicating other user’s location. They are also able to call and message the other members through the in-app text and call functions. If they are not good at navigating, they are able to upload images of their current location, tag themselves on the map, add their physical description/photos for other members to find them. 
+
+            <br><br>The users have the option to add each other to their friend lists if they find them fun and willing to become friends with them afterwards. Their contact information will be shared with each other.
+
+
+          </p>
+        <br><hr>
+        
+        <h3>Hi-Fi Mockup</h3>
+        <p>
+          <img src="img/mockup2.jpg" style="height: 70vh"/>
+        </p><hr>
+
+        <h3>Limitations and Implications</h3>
+        <p>
+          However, one of the main concerns that the users might have could be the security. Therefore, the app would employ Facebook registration as a safety protocol. They would also provide phone numbers to the app for security measures. However, the users will not have access to each other’s Facebook account or phone number unless they friend each other. Users are able to report users if they feel uncomfortable. By employing this method, it makes sure that the app provides secure access and at the same time does not breach the privacy of individual users.
+
+          <br><br>The best part of this solution is its scalability: it can be applied even more broadly to the general public, for anyone who is interested to find people with similar interests and make new connections with each other.
+
+        </p>
+      </div>
+    </div>
+
+
+
+    </script>
+  </body>
+</html>
